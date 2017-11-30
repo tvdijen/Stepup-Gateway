@@ -113,7 +113,11 @@ class SecondFactorController extends Controller
         $this->getStepupService()->clearSmsVerificationState();
 
         $route = 'gateway_verify_second_factor_';
-        if ($secondFactor->isGssf()) {
+
+        $secondFactorTypeService = $this->get('surfnet_stepup.service.second_factor_type');
+        $secondFactorType = new SecondFactorType($secondFactor->secondFactorType);
+
+        if ($secondFactorTypeService->isGssf($secondFactorType)) {
             $route .= 'gssf';
         } else {
             $route .= strtolower($secondFactor->secondFactorType);
@@ -525,24 +529,5 @@ class SecondFactorController extends Controller
         }
 
         return $selectedSecondFactor;
-    }
-
-    private function selectAndRedirectTo(SecondFactor $secondFactor, ResponseContext $context)
-    {
-        $context->saveSelectedSecondFactor($secondFactor);
-
-        $this->getStepupService()->clearSmsVerificationState();
-
-        $secondFactorTypeService = $this->get('surfnet_stepup.service.second_factor_type');
-        $secondFactorType = new SecondFactorType($this->secondFactorType);
-
-        $route = 'gateway_verify_second_factor_';
-        if ($secondFactorTypeService->isGssf($secondFactorType)) {
-            $route .= 'gssf';
-        } else {
-            $route .= strtolower($secondFactor->secondFactorType);
-        }
-
-        return $this->redirect($this->generateUrl($route));
     }
 }
