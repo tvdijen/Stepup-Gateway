@@ -112,7 +112,7 @@ parameters:
     saml_remote_idp_entity_id:
     # The SAML SSO Location of the Remote IdP
     saml_remote_idp_sso_url:
-    # The SAML Base64 encoded DER X.509 SAML Signing certificate of the Remote IdP. This is the value of the
+    # The SAML Base64 encoded PEM X.509 SAML Signing certificate of the Remote IdP. This is the value of the
     # X509Certificate element in the SAML Metadata of the Remote IdP.
     saml_remote_idp_certificate: 'FOR CI ONLY, REPLACE WITH ACTUAL VALUE'
 
