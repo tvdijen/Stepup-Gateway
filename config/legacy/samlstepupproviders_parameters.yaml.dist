@@ -35,7 +35,7 @@ parameters:
 
     # Real (i.e. external) Tiqr GSSP IdP
     gssp_tiqr_remote_entity_id: 'https://tiqr.tld/saml/metadata'
-    gssp_tiqr_remote_sso_url: 'https://tiqr.tld//saml/sso'
+    gssp_tiqr_remote_sso_url: 'https://tiqr.tld/saml/sso'
     gssp_tiqr_remote_certificate: 'The contents of the certificate published by the gssp, excluding PEM headers'
 
     # The logo used for tiqr, shown in the choose second factor screen (WAYG)
