@@ -20,6 +20,7 @@
         "ext-dom": "*",
         "ext-libxml": "*",
         "beberlei/assert": "^2.0",
+        "cmdotcom/text-sdk-php": "^2.2",
         "doctrine/cache": "~1.4",
         "doctrine/common": "~2.5",
         "doctrine/dbal": "~2.5",

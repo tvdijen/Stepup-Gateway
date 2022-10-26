@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da404a80f88ee2da05b663713b923b60",
+    "content-hash": "e4c9077076e8ef4ad2e35378c59ac7c5",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -64,6 +64,65 @@
                 "source": "https://github.com/beberlei/assert/tree/v2.9.9"
             },
             "time": "2019-05-28T15:27:37+00:00"
+        },
+        {
+            "name": "cmdotcom/text-sdk-php",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cmdotcom/text-sdk-php.git",
+                "reference": "ec1bb54cf74cab8666a2b6aa377cfeefc2a8aeb5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cmdotcom/text-sdk-php/zipball/ec1bb54cf74cab8666a2b6aa377cfeefc2a8aeb5",
+                "reference": "ec1bb54cf74cab8666a2b6aa377cfeefc2a8aeb5",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-json": "*",
+                "php": "^7.0||^8.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~6.0||~9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CMText": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Niels Verbaken",
+                    "email": "nv@cm.nl",
+                    "role": "Developer"
+                }
+            ],
+            "description": "PHP SDK to send messages with CM.com",
+            "homepage": "https://www.cm.com/products/text/",
+            "keywords": [
+                "IMessage",
+                "cm.com",
+                "instagram",
+                "line",
+                "rcs",
+                "sms",
+                "twitter",
+                "viber",
+                "wechat",
+                "whatsapp"
+            ],
+            "support": {
+                "issues": "https://github.com/cmdotcom/text-sdk-php/issues",
+                "source": "https://github.com/cmdotcom/text-sdk-php/tree/2.2.0"
+            },
+            "time": "2022-09-29T13:25:09+00:00"
         },
         {
             "name": "composer/ca-bundle",
